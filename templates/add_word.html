@@ -1,0 +1,46 @@
+{% extends 'panle_base.html' %}
+
+{% block main %}
+            <section class="header">
+                <h3 class="title">افزودن کلمه جدید</h3>
+            </section>
+
+            <section class="medium-info">
+                <div class="item">
+                    <h4 class="title"><i class="far fa-edit"></i> ویرایش اطلاعات هویتی</h4>
+                    <div class="content">
+                        <form action="">
+                            <span>
+                                <label for="firstname">کلمه : </label>
+                                <input type="text" id="firstname" name="firstname" value="تست تست">
+                            </span>
+                            <span>
+                                <label for="lastname">معنی : </label>
+                                <input type="text" id="lastname" name="lastname" value="تست تست">
+                            </span>
+                            <span>
+                                <label for="phonenumber">دسته ها : </label>
+                                <input type="text" class="hastick" id="phonenumber" name="phonenumber" value="09364711292">
+                                
+                            </span>
+                            <span>
+                                <label for="phone">سطح : </label>
+                                <input type="text" class="hastick" id="phone" name="phone" value="09364711292">
+                            </span>
+                            <div class="btns">
+                                <button>ثبت</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="item last">
+                    <h4 class="title"><i class="fas fa-exclamation-triangle"></i> نکات و هشدارها</h4>
+                    <div class="content">
+                        <p>
+                            لطفا در وارد کردن مشخصات خود دقت کافی داشته باشید.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+{% endblock main %}

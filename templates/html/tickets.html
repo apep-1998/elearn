@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="content-language" content="en">
+        <meta name="viewport" content="width:device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style/style.css">
+        <link rel="stylesheet" type="text/css" href="style/rtl-style.css">
+        <link rel="stylesheet" type="text/css" href="style/colors.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+        <link rel="shortcut icon" href="../images/favicon.png">
+        <title>Panel</title>
+        <script src="javascripts/jquery.js" type="text/javascript"></script>
+        <script src="javascripts/index.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+    </head>
+    <body> 
+
+        <header>
+            <nav>
+                <button class="menu"><i class="fas fa-bars"></i></button>
+                <a class="messages" href="#"><i class="fas fa-envelope"></i> پیام ها <label>(5)</label></a>
+                <a class="reports" href="#"><i class="fas fa-exclamation"></i> گزارشات <label>(6)</label></a>
+            </nav>
+        </header>
+
+
+        <aside class="main-menu">
+            <section class="logo">
+                پنل<label> مدیریت</label>
+                <button class="menu"><i class="fas fa-bars"></i></button>
+            </section>
+            <section class="user-details"> <span> <div><img src="images/user.png"><canvas id="user_progress_chart" width="100" height="100"></canvas></div> <label>NewFolder131111</label></span> </section>
+            <script type="text/javascript">
+                var ctx = document.getElementById("user_progress_chart");
+                var myChart = new Chart(ctx,{
+                    type: 'doughnut',
+                    data: {
+                        datasets: [{
+                            data: [75, 25],
+                            backgroundColor: [
+                                'rgba(52, 109, 32, 1)',
+                                'transparent'
+                            ],
+                            hoverBackgroundColor: [
+                                'rgba(52, 109, 32, 1)',
+                                'transparent'
+                            ],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        tooltips: {
+                            enabled: false,
+                        }
+                    }
+                });
+            </script>
+            <nav>
+                <a href="index.html"><img src="images/icons/panel.png" class="menu-img"> داشبورد</a>
+
+                <ul class="hasUL">
+                    <li><img src="images/icons/profile.png" class="menu-img"> پروفایل<i class="fas fa-ellipsis-h"></i></li>
+                    <ul>
+                        <li><a href="edit_profile.html"><i class="far fa-edit"></i> ویرایش اطلاعات هویتی</a></li>
+                        <li><a href="edit_financial.html"><i class="far fa-edit"></i> ویرایش اطلاعات مالی</a></li>
+                        <li><a href="video_chat.html"><i class="fas fa-video"></i> مصاحبه تصویری</a></li>
+                    </ul>
+                </ul>
+
+                <ul class="hasUL">
+                    <li><img src="images/icons/webmoney.png" class="menu-img" style="width:15px;"> خدمات وب مانی <i class="fas fa-ellipsis-h"></i></li>
+                    <ul>
+                        <li><a href="wm_charge.html"><i class="far fa-credit-card"></i> شارژ حساب وب مانی</a></li>
+                        <li><a href="wm_buywith.html"><i class="far fa-credit-card"></i> خرید با وب مانی</a></li>
+                        <li><a href="wm_sell.html"><i class="fas fa-shopping-cart"></i> فروش وب مانی</a></li>
+                        <li><a href="wm_paymer_sell.html"><i class="fas fa-shopping-cart"></i> فروش پیمر وب مانی</a></li>
+                        <li><a href="wm_create_acc.html"><i class="fas fa-file-medical"></i> افتتاح حساب وب مانی</a></li>
+                    </ul>
+                </ul>
+
+                <ul class="hasUL">
+                    <li><img src="images/icons/perfectmoney.png" class="menu-img" style="width:16px;"> خدمات پرفکت مانی <i class="fas fa-ellipsis-h"></i></li>
+                    <ul>
+                        <li><a href="pm_charge.html"><i class="far fa-credit-card"></i> شارژ حساب پرفکت مانی</a></li>
+                        <li><a href="pm_voucher_buy.html"><i class="far fa-credit-card"></i> خرید ووچر پرفکت مانی</a></li>
+                        <li><a href="pm_buywith.html"><i class="far fa-credit-card"></i> خرید با پرفکت مانی</a></li>
+                        <li><a href="pm_sell.html"><i class="fas fa-shopping-cart"></i> فروش پرفکت مانی</a></li>
+                        <li><a href="pm_voucher_sell.html"><i class="fas fa-shopping-cart"></i> فروش ووچر پرفکت مانی</a></li>
+                        <li><a href="pm_create_acc.html"><i class="fas fa-file-medical"></i> افتتاح حساب پرفکت مانی</a></li>
+                    </ul>
+                </ul>
+
+                <ul class="hasUL">
+                    <li><img src="images/icons/support.png" class="menu-img"> پشتیبانی <i class="fas fa-ellipsis-h"></i></li>
+                    <ul>
+                        <li><a href="newticket.html"><i class="fas fa-plus"></i> ثبت تیکت جدید</a></li>
+                        <li><a href="tickets.html"><i class="fas fa-list fa-rotate-180"></i> لیست درخواست ها</a></li>
+                    </ul>
+                </ul>
+
+            </nav>
+        </aside>
+
+        <main class="container">
+
+            <h5 class="alert red"> به این وبسایت خوش آمدید. </h5>
+
+            <section class="header">
+                <h3 class="title">پشتیبانی</h3>
+            </section>
+
+            <section class="large-info">
+                <div class="item">
+                    <h4 class="title"><i class="fas fa-list fa-rotate-180"></i> لیست تیکت ها</h4>
+                    <div class="content">
+                        <table>
+                            <tr>
+                                <th>شناسه</th>
+                                <th>موضوع</th>
+                                <th>اولویت</th>
+                                <th>واحد</th>
+                                <th>وضعیت</th>
+                                <th>تاریخ ایجاد</th>
+                                <th>آخرین بروزرسانی</th>
+                            </tr>
+                            <tr class="hover">
+                                <td>MEN-20202192</td>
+                                <td><a href="#">درخواست واریز موجودی</a></td>
+                                <td>متوسط</td>
+                                <td>مالی</td>
+                                <td>پاسخ داده شده</td>
+                                <td>1397/06/29 04:09 ب.ظ</td>
+                                <td>1397/06/31 09:25 ق.ظ</td>
+                            </tr>
+                            <tr class="hover">
+                                <td>MEN-20202192</td>
+                                <td><a href="#">درخواست واریز موجودی</a></td>
+                                <td>متوسط</td>
+                                <td>مالی</td>
+                                <td>پاسخ داده شده</td>
+                                <td>1397/06/29 04:09 ب.ظ</td>
+                                <td>1397/06/31 09:25 ق.ظ</td>
+                            </tr>
+                            <tr class="hover">
+                                <td>MEN-20202192</td>
+                                <td><a href="#">درخواست واریز موجودی</a></td>
+                                <td>متوسط</td>
+                                <td>مالی</td>
+                                <td>پاسخ داده شده</td>
+                                <td>1397/06/29 04:09 ب.ظ</td>
+                                <td>1397/06/31 09:25 ق.ظ</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+    </body>
+</html>

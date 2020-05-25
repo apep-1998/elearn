@@ -1,0 +1,145 @@
+{% extends 'panle_base.html' %}
+
+{% block main %}
+            <section class="header">
+                <h3 class="title">داشبورد</h3>
+            </section>
+
+            <section class="small-info">
+                <div class="item">
+                    <i class="far fa-money-bill-alt" style="color:darkgreen;"></i>
+                    <div class="info">
+                        <h4>امتیاز شما</h4>
+                        <h5>143,021</h5>
+                    </div>
+                </div>
+                <div class="item">
+                    <i class="fas fa-circle-notch" style="color:rgba(84,110,122 ,1);"></i>
+                    <div class="info">
+                        <h4>مدال شما</h4>
+                        <h5>خدای کلمه</h5>
+                    </div>
+                </div>
+                <div class="item">
+                    <i class="far fa-calendar" style="color:rgba(175,180,43 ,1);"></i>
+                    <div class="info">
+                        <h4>دنبال کنندگان شما</h4>
+                        <h5>۳۹۴۲</h5>
+                    </div>
+                </div>
+                <div class="item last">
+                    <i class="fas fa-users"></i>
+                    <div class="info">
+                        <h4>دنبال شوندگان</h4>
+                        <h5>143,021</h5>
+                    </div>
+                </div>
+            </section> 
+
+            <section class="medium-info">
+                <div class="item">
+                    <h4 class="title"><img src="images/icons/chart.png">وضعیت کارکرد یک ماه اخیر</h4>
+                    <div class="content">
+                        <canvas id="perfectmoney_nerkh" width="100" height="50"></canvas>
+                        <script>
+                            var ctx = document.getElementById("perfectmoney_nerkh").getContext('2d');
+                            var myChart = new Chart(ctx, {
+                                type: 'line',
+                                data: {
+                                    labels: ["12:30", "13:30", "14:30", "15:30", "16:30", "17:30"],
+                                    datasets: [{
+                                        label: ['قیمت'],
+                                        data: [10000, 10250, 9000, 8700, 9900, 12300],
+                                        backgroundColor: [
+                                            'rgba(198,40,40 ,0.5)'
+                                        ],
+                                        borderColor: [
+                                            'rgba(198,40,40 ,1)'
+                                        ],
+                                        borderWidth: 1
+                                    }]
+                                },
+                                options: {
+                                    legend: {
+                                        display: false,
+                                    },
+                                    scales: {
+                                        yAxes: [{
+                                            ticks: {
+                                                beginAtZero:false
+                                            }
+                                        }]
+                                    }
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+                <div class="item last">
+                    <h4 class="title"><img src="images/icons/chart.png"> تعداد کلمات درست ماه اخیر</h4>
+                    <div class="content">
+                        <canvas id="webmoney_nerkh" width="100" height="50"></canvas>
+                        <script>
+                            var ctx = document.getElementById("webmoney_nerkh").getContext('2d');
+                            var myChart = new Chart(ctx, {
+                                type: 'line',
+                                data: {
+                                    labels: ["12:30", "13:30", "14:30", "15:30", "16:30", "17:30"],
+                                    datasets: [{
+                                        label: ['قیمت'],
+                                        data: [9900, 12100, 14200, 13700, 12000, 13200],
+                                        backgroundColor: [
+                                            'rgba(21,101,192 ,0.5)'
+                                        ],
+                                        borderColor: [
+                                            'rgba(21,101,192 ,1)'
+                                        ],
+                                        borderWidth: 1
+                                    }]
+                                },
+                                options: {
+                                    legend: {
+                                        display: false,
+                                    },
+                                    scales: {
+                                        yAxes: [{
+                                            ticks: {
+                                                beginAtZero:false
+                                            }
+                                        }]
+                                    }
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+            </section>
+
+            <section class="medium-info">
+                <div class="item">
+                    <h4 class="title">موجودی فعلی WebSite.CoM</h4>
+                    <div class="content">
+                        <table>
+                            <tr class="hover">
+                                <td class="right"><img src="images/icons/perfectmoney.png"> پرفکت مانی</td>
+                                <td>$2.500</td>
+                                <td><a href="#">خرید</a></td>
+                                <td><a href="#">فروش</a></td>
+                            </tr>
+                            <tr class="hover">
+                                <td class="right"><img src="images/icons/webmoney.png"> وب مانی</td>
+                                <td>$3.500</td>
+                                <td><a href="#">خرید</a></td>
+                                <td><a href="#">فروش</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="item last">
+                    <h4 class="title">آخرین مطلب در وبلاگ ما</h4>
+                    <div class="content">
+                    </div>
+                </div>
+            </section>
+
+{% endblock main %}

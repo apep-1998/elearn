@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="content-language" content="en">
+        <meta name="viewport" content="width:device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style/style.css">
+        <link rel="stylesheet" type="text/css" href="style/rtl-style.css">
+        <link rel="stylesheet" type="text/css" href="style/colors.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+        <link rel="shortcut icon" href="../images/favicon.png">
+        <title>Panel</title>
+        <script src="javascripts/jquery.js" type="text/javascript"></script>
+        <script src="javascripts/index.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+    </head>
+    <body> 
+
+        <header>
+            <nav>
+                <button class="menu"><i class="fas fa-bars"></i></button>
+                <a class="messages" href="#"><i class="fas fa-envelope"></i> پیام ها <label>(5)</label></a>
+                <a class="reports" href="#"><i class="fas fa-exclamation"></i> گزارشات <label>(6)</label></a>
+            </nav>
+        </header>
+
+
+        <aside class="main-menu">
+            <section class="logo">
+                پنل<label> مدیریت</label>
+                <button class="menu"><i class="fas fa-bars"></i></button>
+            </section>
+            <section class="user-details"> <span> <div><img src="images/user.png"><canvas id="user_progress_chart" width="100" height="100"></canvas></div> <label>NewFolder131111</label></span> </section>
+            <script type="text/javascript">
+                var ctx = document.getElementById("user_progress_chart");
+                var myChart = new Chart(ctx,{
+                    type: 'doughnut',
+                    data: {
+                        datasets: [{
+                            data: [75, 25],
+                            backgroundColor: [
+                                'rgba(52, 109, 32, 1)',
+                                'transparent'
+                            ],
+                            hoverBackgroundColor: [
+                                'rgba(52, 109, 32, 1)',
+                                'transparent'
+                            ],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        tooltips: {
+                            enabled: false,
+                        }
+                    }
+                });
+            </script>
+            <nav>
+                <a href="index.html"><img src="images/icons/panel.png" class="menu-img"> داشبورد</a>
+
+                <ul class="hasUL">
+                    <li><img src="images/icons/profile.png" class="menu-img"> یادگیری کلمات<i class="fas fa-ellipsis-h"></i></li>
+                    <ul>
+                        <li><a href="edit_profile.html"><i class="far fa-edit"></i>ساخت لیست جدید</a></li>
+                        <li><a href="edit_financial.html"><i class="far fa-edit"></i>ویرایش لیست ها</a></li>
+                        <li><a href="video_chat.html"><i class="fas fa-video"></i>تمرینات</a></li>
+                    </ul>
+                </ul>
+
+                <ul class="hasUL">
+                    <li><img src="images/icons/webmoney.png" class="menu-img" style="width:15px;">ثبت جمله<i class="fas fa-ellipsis-h"></i></li>
+                    <ul>
+                        <li><a href="wm_charge.html"><i class="far fa-credit-card"></i> شارژ حساب وب مانی</a></li>
+                        <li><a href="wm_buywith.html"><i class="far fa-credit-card"></i> خرید با وب مانی</a></li>
+                        <li><a href="wm_sell.html"><i class="fas fa-shopping-cart"></i> فروش وب مانی</a></li>
+                        <li><a href="wm_paymer_sell.html"><i class="fas fa-shopping-cart"></i> فروش پیمر وب مانی</a></li>
+                        <li><a href="wm_create_acc.html"><i class="fas fa-file-medical"></i> افتتاح حساب وب مانی</a></li>
+                    </ul>
+                </ul>
+
+
+            </nav>
+        </aside>
+
+        <main class="container">
+
+            <h5 class="alert green"> به این وبسایت خوش آمدید. </h5>
+            <h5 class="alert yellow"> به این وبسایت خوش آمدید. </h5>
+            <h5 class="alert orange"> به این وبسایت خوش آمدید. </h5>
+            <h5 class="alert red"> به این وبسایت خوش آمدید. </h5>
+
+            <section class="header">
+                <h3 class="title">داشبورد</h3>
+            </section>
+
+            <section class="small-info">
+                <div class="item">
+                    <i class="far fa-money-bill-alt" style="color:darkgreen;"></i>
+                    <div class="info">
+                        <h4>موجودی حساب شما</h4>
+                        <h5>143,021 تومان</h5>
+                    </div>
+                </div>
+                <div class="item">
+                    <i class="fas fa-circle-notch" style="color:rgba(84,110,122 ,1);"></i>
+                    <div class="info">
+                        <h4>وضعیت حساب شما</h4>
+                        <h5>نقره ای</h5>
+                    </div>
+                </div>
+                <div class="item">
+                    <i class="far fa-calendar" style="color:rgba(175,180,43 ,1);"></i>
+                    <div class="info">
+                        <h4>آخرین تراکنش شما</h4>
+                        <h5>22:12 - 1397/02/23</h5>
+                    </div>
+                </div>
+                <div class="item last">
+                    <i class="fas fa-users"></i>
+                    <div class="info">
+                        <h4>کاربران آنلاین</h4>
+                        <h5>143,021</h5>
+                    </div>
+                </div>
+            </section> 
+
+            <section class="medium-info">
+                <div class="item">
+                    <h4 class="title"><img src="images/icons/chart.png"> نوسانات قیمت دلار پرفکت مانی</h4>
+                    <div class="content">
+                        <canvas id="perfectmoney_nerkh" width="100" height="50"></canvas>
+                        <script>
+                            var ctx = document.getElementById("perfectmoney_nerkh").getContext('2d');
+                            var myChart = new Chart(ctx, {
+                                type: 'line',
+                                data: {
+                                    labels: ["12:30", "13:30", "14:30", "15:30", "16:30", "17:30"],
+                                    datasets: [{
+                                        label: ['قیمت'],
+                                        data: [10000, 10250, 9000, 8700, 9900, 12300],
+                                        backgroundColor: [
+                                            'rgba(198,40,40 ,0.5)'
+                                        ],
+                                        borderColor: [
+                                            'rgba(198,40,40 ,1)'
+                                        ],
+                                        borderWidth: 1
+                                    }]
+                                },
+                                options: {
+                                    legend: {
+                                        display: false,
+                                    },
+                                    scales: {
+                                        yAxes: [{
+                                            ticks: {
+                                                beginAtZero:false
+                                            }
+                                        }]
+                                    }
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+                <div class="item last">
+                    <h4 class="title"><img src="images/icons/chart.png"> نوسانات قیمت دلار وب مانی</h4>
+                    <div class="content">
+                        <canvas id="webmoney_nerkh" width="100" height="50"></canvas>
+                        <script>
+                            var ctx = document.getElementById("webmoney_nerkh").getContext('2d');
+                            var myChart = new Chart(ctx, {
+                                type: 'line',
+                                data: {
+                                    labels: ["12:30", "13:30", "14:30", "15:30", "16:30", "17:30"],
+                                    datasets: [{
+                                        label: ['قیمت'],
+                                        data: [9900, 12100, 14200, 13700, 12000, 13200],
+                                        backgroundColor: [
+                                            'rgba(21,101,192 ,0.5)'
+                                        ],
+                                        borderColor: [
+                                            'rgba(21,101,192 ,1)'
+                                        ],
+                                        borderWidth: 1
+                                    }]
+                                },
+                                options: {
+                                    legend: {
+                                        display: false,
+                                    },
+                                    scales: {
+                                        yAxes: [{
+                                            ticks: {
+                                                beginAtZero:false
+                                            }
+                                        }]
+                                    }
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+            </section>
+
+            <section class="medium-info">
+                <div class="item">
+                    <h4 class="title">موجودی فعلی WebSite.CoM</h4>
+                    <div class="content">
+                        <table>
+                            <tr class="hover">
+                                <td class="right"><img src="images/icons/perfectmoney.png"> پرفکت مانی</td>
+                                <td>$2.500</td>
+                                <td><a href="#">خرید</a></td>
+                                <td><a href="#">فروش</a></td>
+                            </tr>
+                            <tr class="hover">
+                                <td class="right"><img src="images/icons/webmoney.png"> وب مانی</td>
+                                <td>$3.500</td>
+                                <td><a href="#">خرید</a></td>
+                                <td><a href="#">فروش</a></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="item last">
+                    <h4 class="title">آخرین مطلب در وبلاگ ما</h4>
+                    <div class="content">
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+    </body>
+</html>
